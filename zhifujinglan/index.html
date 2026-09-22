@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="致富经栏目 - 农村致富项目、创业成功案例、特色养殖种植技术、农业投资分析与致富经验分享。">
+    <meta name="keywords" content="致富经栏目,农村创业,特色养殖,农业致富,创业项目">
+    <title>致富经栏目-农村致富项目与创业成功案例指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-green: #2e7d32;
+            --secondary-green: #4caf50;
+            --accent-gold: #f9a825;
+            --text-dark: #1b1b1b;
+            --text-gray: #666;
+            --bg-light: #f5f7fa;
+            --white: #ffffff;
+            --border-radius: 8px;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header & Navigation */
+        header {
+            background-color: var(--white);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .top-bar {
+            background-color: var(--primary-green);
+            color: var(--white);
+            font-size: 0.85rem;
+            padding: 8px 0;
+        }
+
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .top-bar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header-main {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--primary-green);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--accent-gold);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-weight: 600;
+            color: var(--text-dark);
+            position: relative;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-green);
+        }
+
+        nav a.active::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: var(--primary-green);
+        }
+
+        .search-btn {
+            background: none;
+            border: none;
+            font-size: 1.2rem;
+            cursor: pointer;
+            color: var(--text-gray);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://picsum.photos/seed/farming/1600/600') no-repeat center center/cover;
+            color: var(--white);
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            opacity: 0.9;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--accent-gold);
+            color: var(--text-dark);
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 700;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            background-color: #fbc02d;
+        }
+
+        /* Categories */
+        .categories {
+            padding: 40px 0;
+        }
+
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .cat-card {
+            background: var(--white);
+            padding: 20px;
+            border-radius: var(--border-radius);
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: transform 0.2s;
+            cursor: pointer;
+            border: 1px solid #eee;
+        }
+
+        .cat-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary-green);
+        }
+
+        .cat-icon {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .cat-title {
+            font-weight: 700;
+            color: var(--text-dark);
+        }
+
+        /* Main Content Layout */
+        .main-content {
+            padding: 40px 0;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+        }
+
+        /* Article List */
+        .section-title {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid var(--primary-green);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .article-card {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            margin-bottom: 30px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .article-img {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+        }
+
+        .article-body {
+            padding: 20px;
+        }
+
+        .article-tag {
+            display: inline-block;
+            background-color: #e8f5e9;
+            color: var(--primary-green);
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .article-title {
+            font-size: 1.25rem;
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+
+        .article-excerpt {
+            color: var(--text-gray);
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+        }
+
+        .article-meta {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.85rem;
+            color: #999;
+            border-top: 1px solid #eee;
+            padding-top: 15px;
+        }
+
+        /* Sidebar */
+        .sidebar-widget {
+            background: var(--white);
+            padding: 20px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            margin-bottom: 30px;
+        }
+
+        .widget-title {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            font-weight: 700;
+            color: var(--primary-green);
+            border-left: 4px solid var(--accent-gold);
+            padding-left: 10px;
+        }
+
+        .rank-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid #f0f0f0;
+            display: flex;
+            align-items: center;
+        }
+
+        .rank-list li:last-child {
+            border-bottom: none;
+        }
+
+        .rank-num {
+            width: 24px;
+            height: 24px;
+            background-color: var(--primary-green);
+            color: var(--white);
+            border-radius: 50%;
+            text-align: center;
+            line-height: 24px;
+            font-size: 0.8rem;
+            margin-right: 10px;
+            flex-shrink: 0;
+        }
+
+        .rank-list li:nth-child(1) .rank-num { background-color: #d32f2f; }
+        .rank-list li:nth-child(2) .rank-num { background-color: #f57c00; }
+        .rank-list li:nth-child(3) .rank-num { background-color: #fbc02d; }
+
+        .rank-title {
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            padding: 60px 0;
+            background-color: var(--white);
+            margin-top: 40px;
+        }
+
+        .faq-grid {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #eee;
+            padding: 20px 0;
+        }
+
+        .faq-question {
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            color: var(--text-dark);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .faq-answer {
+            color: var(--text-gray);
+            padding-left: 10px;
+            border-left: 3px solid var(--primary-green);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #263238;
+            color: #b0bec5;
+            padding: 50px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h3 {
+            color: var(--white);
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--white);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #37474f;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-main {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            nav ul {
+                gap: 15px;
+                font-size: 0.9rem;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <span>欢迎来到致富经栏目，分享真实农村创业故事</span>
+            <span>关注我们：获取最新农业资讯</span>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-main">
+                <div class="logo">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--primary-green)"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.77 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
+                    致富经<span>栏目</span>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#" class="active">首页</a></li>
+                        <li><a href="#">创业故事</a></li>
+                        <li><a href="#">特色养殖</a></li>
+                        <li><a href="#">种植技术</a></li>
+                        <li><a href="#">农产品加工</a></li>
+                        <li><a href="#">政策解读</a></li>
+                    </ul>
+                </nav>
+                <button class="search-btn">🔍</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>探索农村致富新路径</h1>
+            <p>汇集真实创业案例，分享特色养殖与种植技术，助您把握农业商机，实现财富增长。</p>
+            <a href="#" class="cta-button">查看热门项目</a>
+        </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="categories">
+        <div class="container">
+            <div class="category-grid">
+                <div class="cat-card">
+                    <span class="cat-icon">🦆</span>
+                    <div class="cat-title">特色养殖</div>
+                </div>
+                <div class="cat-card">
+                    <span class="cat-icon">🌾</span>
+                    <div class="cat-title">高效种植</div>
+                </div>
+                <div class="cat-card">
+                    <span class="cat-icon">🏭</span>
+                    <div class="cat-title">农产品加工</div>
+                </div>
+                <div class="cat-card">
+                    <span class="cat-icon">🚜</span>
+                    <div class="cat-title">农机租赁</div>
+                </div>
+                <div class="cat-card">
+                    <span class="cat-icon">🚜</span>
+                    <div class="cat-title">生态旅游</div>
+                </div>
+                <div class="cat-card">
+                    <span class="cat-icon">🛒</span>
+                    <div class="cat-title">电商销售</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="container main-content">
+        
+        <!-- Articles Feed -->
+        <main>
+            <div class="section-title">
+                <span>最新致富案例</span>
+                <a href="#" style="font-size: 0.9rem; color: var(--primary-green);">查看更多 &raquo;</a>
+            </div>
+
+            <article class="article-card">
+                <img src="https://picsum.photos/seed/chicken/800/400" alt="特种养殖" class="article-img">
+                <div class="article-body">
+                    <span class="article-tag">特色养殖</span>
+                    <h2 class="article-title">不起眼的黑鸡养殖，年入几十万，他是如何做到的？</h2>
+                    <p class="article-excerpt">在山东某农村，李大叔通过引进特色黑鸡品种，结合林下散养模式，不仅降低了饲料成本，还提高了肉质品质。本文详细解析了他的养殖技术、市场定位以及如何建立稳定的销售渠道。</p>
+                    <div class="article-meta">
+                        <span>作者：致富经观察员</span>
+                        <span>阅读：12,580</span>
+                        <span>时间：2023-10-24</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="article-card">
+                <img src="https://picsum.photos/seed/fruit/800/400" alt="水果种植" class="article-img">
+                <div class="article-body">
+                    <span class="article-tag">种植技术</span>
+                    <h2 class="article-title">蓝莓种植遇瓶颈？专家支招：这三种方法让产量翻倍</h2>
+                    <p class="article-excerpt">随着人们健康意识的提高，蓝莓市场需求持续增长。但很多新手种植户面临病虫害多、挂果率低的问题。本文整理了多位种植大户的经验，分享修剪、施肥及授粉的关键技巧。</p>
+                    <div class="article-meta">
+                        <span>作者：农业技术站</span>
+                        <span>阅读：8,932</span>
+                        <span>时间：2023-10-22</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="article-card">
+                <img src="https://picsum.photos/seed/honey/800/400" alt="蜂蜜加工" class="article-img">
+                <div class="article-body">
+                    <span class="article-tag">加工销售</span>
+                    <h2 class="article-title">土蜂蜜卖不上价？转型做“蜂产品深加工”，利润惊人</h2>
+                    <p class="article-excerpt">单纯卖原蜜利润薄，如何提升产品附加值？张老板通过开发蜂王浆、花粉蜜片等深加工产品，成功打入高端礼品市场。文章为您揭秘深加工的设备投入与市场推广策略。</p>
+                    <div class="article-meta">
+                        <span>作者：创业导师</span>
+                        <span>阅读：15,400</span>
+                        <span>时间：2023-10-20</span>
+                    </div>
+                </div>
+            </article>
+
+        </main>
+
+        <!-- Sidebar -->
+        <aside>
+            <!-- Hot List -->
+            <div class="sidebar-widget">
+                <div class="widget-title">热门推荐</div>
+                <ul class="rank-list">
+                    <li>
+                        <span class="rank-num">1</span>
+                        <span class="rank-title">大棚蔬菜种植技术：如何应对连阴天气？</span>
+                    </li>
+                    <li>
+                        <span class="rank-num">2</span>
+                        <span class="rank-title">投资20万开农家乐，一年回本的真实经历</span>
+                    </li>
+                    <li>
+                        <span class="rank-num">3</span>
+                        <span class="rank-title">农村电商：如何把自家土特产卖到全国？</span>
+                    </li>
+                    <li>
+                        <span class="rank-num">4</span>
+                        <span class="rank-title">肉牛养殖风险提示：这三类人千万别碰</span>
+                    </li>
+                    <li>
+                        <span class="rank-num">5</span>
+                        <span class="rank-title">中药材种植：金桔与黄精的对比分析</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Expert Advice -->
+            <div class="sidebar-widget">
+                <div class="widget-title">致富经专家团</div>
+                <div style="text-align: center; margin-bottom: 15px;">
+                    <img src="https://picsum.photos/seed/expert/100/100" alt="专家头像" style="border-radius: 50%; margin-bottom: 10px;">
+                    <h4 style="font-size: 1rem;">王建国</h4>
+                    <p style="font-size: 0.8rem; color: #666;">高级农业经济师</p>
+                </div>
+                <p style="font-size: 0.9rem; color: #555; text-align: justify;">
+                    “选择项目前一定要做好市场调研，不要盲目跟风。适合自己的才是最好的。”
+                </p>
+                <button style="width: 100%; margin-top: 10px; padding: 8px; background: var(--primary-green); color: white; border: none; border-radius: 4px; cursor: pointer;">向专家提问</button>
+            </div>
+
+            <!-- Ad Placeholder -->
+            <div class="sidebar-widget" style="background: #e8f5e9; display: flex; align-items: center; justify-content: center; height: 250px; color: var(--primary-green); font-weight: bold;">
+                广告位
+            </div>
+        </aside>
+
+    </div>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container faq-grid">
+            <div class="section-title" style="justify-content: center; border: none;">常见问题解答</div>
+            
+            <div class="faq-item">
+                <div class="faq-question">农村创业需要多少启动资金？</div>
+                <div class="faq-answer">
+                    启动资金因项目而异。小规模种植或养殖可能只需几万元，而建立加工厂或农家乐可能需要几十万元。建议根据自身积蓄和融资能力，选择风险可控的项目起步。
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">没有技术背景能做农业吗？</div>
+                <div class="faq-answer">
+                    可以，但需要学习。很多成功案例的创业者最初也是从零开始，通过参加技术培训、请教专家或与合作社合作来弥补技术短板。
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">如何判断一个农业项目是否有前景？</div>
+                <div class="faq-answer">
+                    主要看三点：一是市场需求是否稳定且在增长；二是当地自然条件是否适合；三是销售渠道是否通畅。建议先进行小规模试种试养，再扩大规模。
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>致富经栏目</h3>
+                    <p style="font-size: 0.9rem; line-height: 1.8;">
+                        致力于为广大农村创业者提供权威、实用的致富信息与经验分享，助力乡村振兴。
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h3>快速导航</h3>
+                    <ul>
+                        <li><a href="#">关于我们</a></li>
+                        <li><a href="#">投稿指南</a></li>
+                        <li><a href="#">联系方式</a></li>
+                        <li><a href="#">隐私政策</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>热门分类</h3>
+                    <ul>
+                        <li><a href="#">特种养殖</a></li>
+                        <li><a href="#">高效种植</a></li>
+                        <li><a href="#">农产品加工</a></li>
+                        <li><a href="#">农村电商</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>关注我们</h3>
+                    <p style="font-size: 0.9rem;">
+                        微信公众号<br>
+                        新浪微博<br>
+                        今日头条
+                    </p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 致富经栏目 版权所有 | 仅供学习交流使用</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+                              </html>
