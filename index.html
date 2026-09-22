@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>吃瓜爆料李雅-全网热点追踪与深度娱乐资讯平台</title>
+    <meta name="description" content="吃瓜爆料李雅平台提供最新娱乐圈热点追踪、明星动态分析及深度八卦解读。专注挖掘真实内幕，还原事件真相，打造最懂吃瓜群众的娱乐资讯社区。">
+    <meta name="keywords" content="吃瓜爆料李雅,明星八卦,娱乐圈热点,李雅,娱乐资讯,吃瓜网">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #ff4757;
+            --secondary-color: #2f3542;
+            --accent-color: #ffa502;
+            --bg-color: #f1f2f6;
+            --card-bg: #ffffff;
+            --text-main: #2f3542;
+            --text-light: #747d8c;
+            --spacing-unit: 16px;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Header */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-inner {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--secondary-color);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav a {
+            font-weight: 500;
+            font-size: 16px;
+            color: var(--secondary-color);
+        }
+
+        nav a.active, nav a:hover {
+            color: var(--primary-color);
+        }
+
+        .search-box {
+            display: flex;
+            background: var(--bg-color);
+            border-radius: 20px;
+            padding: 5px 15px;
+        }
+
+        .search-box input {
+            border: none;
+            background: transparent;
+            outline: none;
+            font-size: 14px;
+            width: 150px;
+        }
+
+        .search-box button {
+            border: none;
+            background: transparent;
+            cursor: pointer;
+            color: var(--text-light);
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 400px;
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('https://picsum.photos/seed/entertainment/1920/600') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 0 var(--spacing-unit);
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-weight: 600;
+            display: inline-block;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        .btn-primary:hover {
+            background-color: #ff6b81;
+            transform: translateY(-2px);
+        }
+
+        /* Main Layout */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 40px var(--spacing-unit);
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            gap: 30px;
+        }
+
+        /* Feed Section */
+        .feed-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #e1e1e1;
+            padding-bottom: 10px;
+        }
+
+        .section-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--secondary-color);
+            border-left: 4px solid var(--primary-color);
+            padding-left: 10px;
+        }
+
+        .filter-tags span {
+            display: inline-block;
+            padding: 5px 15px;
+            background: var(--bg-color);
+            border-radius: 15px;
+            font-size: 13px;
+            margin-right: 8px;
+            cursor: pointer;
+            color: var(--text-light);
+        }
+
+        .filter-tags span.active {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .article-card {
+            background: var(--card-bg);
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+            transition: box-shadow 0.3s;
+        }
+
+        .article-card:hover {
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        .article-img {
+            height: 200px;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .article-body {
+            padding: 20px;
+        }
+
+        .article-meta {
+            font-size: 12px;
+            color: var(--text-light);
+            margin-bottom: 10px;
+            display: flex;
+            gap: 15px;
+        }
+
+        .article-title {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+
+        .article-excerpt {
+            font-size: 14px;
+            color: var(--text-light);
+            margin-bottom: 15px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .article-tags {
+            display: flex;
+            gap: 10px;
+        }
+
+        .tag {
+            font-size: 11px;
+            padding: 2px 8px;
+            background: #ffeaa7;
+            color: #d35400;
+            border-radius: 4px;
+        }
+
+        /* Sidebar */
+        .sidebar-widget {
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+        }
+
+        .widget-title {
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            border-left: 3px solid var(--accent-color);
+            padding-left: 8px;
+        }
+
+        .ranking-list {
+            list-style: none;
+        }
+
+        .ranking-item {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 12px;
+            align-items: flex-start;
+        }
+
+        .rank-num {
+            font-weight: 800;
+            font-size: 18px;
+            color: #ccc;
+            width: 20px;
+        }
+
+        .rank-num.top-1 { color: #ffd700; }
+        .rank-num.top-2 { color: #c0c0c0; }
+        .rank-num.top-3 { color: #cd7f32; }
+
+        .rank-info h4 {
+            font-size: 14px;
+            margin-bottom: 4px;
+            font-weight: 600;
+        }
+
+        .rank-info p {
+            font-size: 12px;
+            color: var(--text-light);
+        }
+
+        .hot-topic {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .hot-topic:last-child {
+            border-bottom: none;
+        }
+
+        .topic-name {
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .topic-count {
+            font-size: 12px;
+            color: var(--primary-color);
+            background: rgba(255, 71, 87, 0.1);
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--secondary-color);
+            color: white;
+            padding: 40px var(--spacing-unit) 20px;
+            margin-top: 40px;
+        }
+
+        .footer-content {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .footer-col h5 {
+            font-size: 16px;
+            margin-bottom: 20px;
+            color: var(--accent-color);
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col a {
+            color: #b2bec3;
+            font-size: 14px;
+        }
+
+        .footer-col a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 20px;
+            font-size: 13px;
+            color: #636e72;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+            
+            .header-inner {
+                flex-wrap: wrap;
+                height: auto;
+                padding: 15px;
+            }
+
+            nav {
+                display: none; /* Simplify for mobile */
+            }
+
+            .search-box {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-inner">
+            <div class="logo">
+                <span>吃瓜</span>爆料李雅
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#">明星动态</a></li>
+                    <li><a href="#">影视综评</a></li>
+                    <li><a href="#">独家深扒</a></li>
+                    <li><a href="#">吃瓜社区</a></li>
+                </ul>
+            </nav>
+            <div class="search-box">
+                <input type="text" placeholder="搜索关键词...">
+                <button>🔍</button>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>吃瓜爆料李雅</h1>
+            <p>第一时间掌握娱乐圈最新风向，深度还原事件真相。汇聚全网热点，为您提供客观、公正的娱乐资讯。</p>
+            <a href="#" class="btn-primary">开始吃瓜</a>
+        </div>
+    </section>
+
+    <div class="container">
+        <!-- Main Content -->
+        <main>
+            <div class="feed-header">
+                <div class="section-title">最新爆料</div>
+                <div class="filter-tags">
+                    <span class="active">综合</span>
+                    <span>李雅</span>
+                    <span>影视</span>
+                    <span>综艺</span>
+                    <span>情感</span>
+                </div>
+            </div>
+
+            <!-- Article 1 -->
+            <article class="article-card">
+                <img src="https://picsum.photos/seed/celebrity1/800/400" alt="明星活动" class="article-img">
+                <div class="article-body">
+                    <div class="article-meta">
+                        <span>2小时前</span>
+                        <span>娱乐</span>
+                        <span>👁 12.5w</span>
+                    </div>
+                    <h2 class="article-title"><a href="#">李雅新剧路透照曝光，清冷气质引发全网热议</a></h2>
+                    <p class="article-excerpt">近日，一组李雅在片场的新剧路透照在网络上流传。照片中的李雅一改往日甜美形象，饰演了一位冷艳的特工角色，造型精致，演技备受期待。</p>
+                    <div class="article-tags">
+                        <span class="tag">#李雅新剧</span>
+                        <span class="tag">#路透</span>
+                        <span class="tag">#演技</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Article 2 -->
+            <article class="article-card">
+                <img src="https://picsum.photos/seed/celebrity2/800/400" alt="综艺节目" class="article-img">
+                <div class="article-body">
+                    <div class="article-meta">
+                        <span>5小时前</span>
+                        <span>综艺</span>
+                        <span>👁 8.2w</span>
+                    </div>
+                    <h2 class="article-title"><a href="#">独家：李雅将加盟热门真人秀，节目组保密工作做得太严</a></h2>
+                    <p class="article-excerpt">据可靠消息源透露，李雅已确认加盟本季现象级真人秀。虽然官方尚未官宣，但多名工作人员在社交媒体上的无意流露，已经让这则消息不胫而走。</p>
+                    <div class="article-tags">
+                        <span class="tag">#综艺加盟</span>
+                        <span class="tag">#独家</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Article 3 -->
+            <article class="article-card">
+                <img src="https://picsum.photos/seed/celebrity3/800/400" alt="时尚活动" class="article-img">
+                <div class="article-body">
+                    <div class="article-meta">
+                        <span>昨天</span>
+                        <span>时尚</span>
+                        <span>👁 5.6w</span>
+                    </div>
+                    <h2 class="article-title"><a href="#">红毯造型分析：李雅这套礼服为何能拿满分？</a></h2>
+                    <p class="article-excerpt">在最近的某品牌盛典上，李雅身穿定制高定礼服亮相，瞬间成为全场焦点。从色彩搭配到剪裁设计，每一个细节都展现了极高的时尚品味。</p>
+                    <div class="article-tags">
+                        <span class="tag">#红毯</span>
+                        <span class="tag">#时尚</span>
+                        <span class="tag">#造型</span>
+                    </div>
+                </div>
+            </article>
+
+            <div class="feed-header" style="margin-top: 30px;">
+                <div class="section-title">深度解析</div>
+            </div>
+
+            <article class="article-card">
+                <div class="article-body">
+                    <div class="article-meta">
+                        <span>深度</span>
+                        <span>3天前</span>
+                    </div>
+                    <h2 class="article-title"><a href="#">从李雅的演艺之路看新生代演员的转型困境</a></h2>
+                    <p class="article-excerpt">近年来，随着流量明星的更迭，像李雅这样既有流量又有实力的演员面临着巨大的转型压力。本文将深入探讨她在多部作品中角色的变化及其背后的行业逻辑。</p>
+                </div>
+            </article>
+        </main>
+
+        <!-- Sidebar -->
+        <aside>
+            <div class="sidebar-widget">
+                <h3 class="widget-title">24小时热榜</h3>
+                <ul class="ranking-list">
+                    <li class="ranking-item">
+                        <span class="rank-num top-1">1</span>
+                        <div class="rank-info">
+                            <h4><a href="#">李雅工作室发布声明澄清传闻</a></h4>
+                            <p>娱乐</p>
+                        </div>
+                    </li>
+                    <li class="ranking-item">
+                        <span class="rank-num top-2">2</span>
+                        <div class="rank-info">
+                            <h4><a href="#">新剧杀青：李雅杀青照流出</a></h4>
+                            <p>影视</p>
+                        </div>
+                    </li>
+                    <li class="ranking-item">
+                        <span class="rank-num top-3">3</span>
+                        <div class="rank-info">
+                            <h4><a href="#">李雅与搭档合作默契满分</a></h4>
+                            <p>综艺</p>
+                        </div>
+                    </li>
+                    <li class="ranking-item">
+                        <span class="rank-num">4</span>
+                        <div class="rank-info">
+                            <h4><a href="#">时尚杂志封面：李雅大片赏析</a></h4>
+                            <p>时尚</p>
+                        </div>
+                    </li>
+                    <li class="ranking-item">
+                        <span class="rank-num">5</span>
+                        <div class="rank-info">
+                            <h4><a href="#">粉丝见面会安排在即</a></h4>
+                            <p>活动</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="sidebar-widget">
+                <h3 class="widget-title">热门话题</h3>
+                <div class="hot-topic">
+                    <span class="topic-name">#李雅演技突破</span>
+                    <span class="topic-count">2.3w</span>
+                </div>
+                <div class="hot-topic">
+                    <span class="topic-name">#李雅新剧定档</span>
+                    <span class="topic-count">1.8w</span>
+                </div>
+                <div class="hot-topic">
+                    <span class="topic-name">#李雅穿搭指南</span>
+                    <span class="topic-count">9.5k</span>
+                </div>
+                <div class="hot-topic">
+                    <span class="topic-name">#李雅最新动态</span>
+                    <span class="topic-count">8.2k</span>
+                </div>
+            </div>
+
+            <div class="sidebar-widget" style="background: #fff3cd; color: #856404; border: 1px solid #ffeeba;">
+                <h3 class="widget-title" style="color: #856404; border-color: #ffeeba;">温馨提示</h3>
+                <p style="font-size: 13px;">本站内容均为网友爆料及公开资讯整理，旨在提供娱乐参考。请理性吃瓜，不造谣、不信谣、不传谣。</p>
+            </div>
+        </aside>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h5>关于我们</h5>
+                <ul>
+                    <li><a href="#">网站简介</a></li>
+                    <li><a href="#">加入我们</a></li>
+                    <li><a href="#">联系方式</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h5>栏目导航</h5>
+                <ul>
+                    <li><a href="#">明星八卦</a></li>
+                    <li><a href="#">影视资讯</a></li>
+                    <li><a href="#">深度报道</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h5>帮助中心</h5>
+                <ul>
+                    <li><a href="#">用户协议</a></li>
+                    <li><a href="#">隐私政策</a></li>
+                    <li><a href="#">意见反馈</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h5>关注我们</h5>
+                <ul>
+                    <li><a href="#">微信公众号</a></li>
+                    <li><a href="#">新浪微博</a></li>
+                    <li><a href="#">抖音账号</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 吃瓜爆料李雅平台 版权所有. 保留所有权利.</p>
+        </div>
+    </footer>
+
+</body>
+              </html>
