@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="韩寒身高查询与个人资料详情。了解韩寒的官方身高数据、体重、年龄等基本信息，以及关于其个人身高的常见问答。">
+    <meta name="keywords" content="韩寒身高,韩寒资料,韩寒简介,韩寒体重">
+    <title>韩寒身高-韩寒个人资料与详细数据查询</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #e74c3c;
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-secondary: #666666;
+            --border-radius: 8px;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            --container-width: 1000px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: var(--bg-color);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-inner {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 1rem 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-secondary);
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Main Container */
+        .container {
+            max-width: var(--container-width);
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #2c3e50 0%, #4ca1af 100%);
+            color: white;
+            padding: 3rem 2rem;
+            border-radius: var(--border-radius);
+            margin-bottom: 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: radial-gradient(circle at 20% 50%, rgba(255,255,255,0.1) 0%, transparent 50%);
+        }
+
+        .hero h1 {
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+            position: relative;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            position: relative;
+        }
+
+        /* Profile Grid */
+        .profile-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        @media (max-width: 768px) {
+            .profile-grid {
+                grid-template-columns: 1fr;
+            }
+            .header-inner {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+
+        .profile-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            padding: 2rem;
+        }
+
+        .profile-card h2 {
+            font-size: 1.4rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #f0f0f0;
+            color: var(--primary-color);
+        }
+
+        .info-list li {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.8rem 0;
+            border-bottom: 1px dashed #eee;
+        }
+
+        .info-list li:last-child {
+            border-bottom: none;
+        }
+
+        .info-label {
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        .info-value {
+            font-weight: 600;
+            color: var(--text-main);
+        }
+
+        .highlight-value {
+            color: var(--accent-color);
+            font-size: 1.1rem;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            margin-bottom: 3rem;
+        }
+
+        .faq-item {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            margin-bottom: 1rem;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 1.2rem 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            background-color: var(--card-bg);
+            transition: background-color 0.2s;
+        }
+
+        .faq-question:hover {
+            background-color: #f1f1f1;
+        }
+
+        .faq-answer {
+            padding: 0 1.5rem 1.5rem 1.5rem;
+            color: var(--text-secondary);
+            display: none;
+            border-top: 1px solid #eee;
+            padding-top: 1rem;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-question::after {
+            content: '−';
+            font-size: 1.5rem;
+        }
+
+        .faq-item:not(.active) .faq-question::after {
+            content: '+';
+        }
+
+        /* About Section */
+        .about-section {
+            background-color: var(--card-bg);
+            padding: 2.5rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            margin-bottom: 3rem;
+        }
+
+        .about-section h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .about-section p {
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 3rem 1.5rem;
+            text-align: center;
+        }
+
+        .footer-content p {
+            opacity: 0.7;
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-inner">
+            <div class="logo">韩寒<span>资料</span></div>
+            <nav>
+                <ul>
+                    <li><a href="#profile">个人资料</a></li>
+                    <li><a href="#faq">常见问答</a></li>
+                    <li><a href="#about">相关介绍</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1>韩寒身高</h1>
+            <p>韩寒个人详细资料查询 - 身高、体重、年龄等核心数据</p>
+        </section>
+
+        <!-- Main Content Grid -->
+        <div class="profile-grid">
+            <!-- Left Column: Data -->
+            <article class="profile-card" id="profile">
+                <h2>基本信息</h2>
+                <ul class="info-list">
+                    <li>
+                        <span class="info-label">姓名</span>
+                        <span class="info-value">韩寒</span>
+                    </li>
+                    <li>
+                        <span class="info-label">性别</span>
+                        <span class="info-value">男</span>
+                    </li>
+                    <li>
+                        <span class="info-label">韩寒身高</span>
+                        <span class="info-value highlight-value">174 厘米</span>
+                    </li>
+                    <li>
+                        <span class="info-label">体重</span>
+                        <span class="info-value">约 68 公斤</span>
+                    </li>
+                    <li>
+                        <span class="info-label">出生日期</span>
+                        <span class="info-value">1982年9月23日</span>
+                    </li>
+                    <li>
+                        <span class="info-label">出生地</span>
+                        <span class="info-value">中国上海市金山区</span>
+                    </li>
+                    <li>
+                        <span class="info-label">星座</span>
+                        <span class="info-value">天秤座</span>
+                    </li>
+                </ul>
+            </article>
+
+            <!-- Right Column: Introduction -->
+            <article class="profile-card" id="about">
+                <h2>人物简介</h2>
+                <p>韩寒，中国作家、导演、职业赛车手。作为多栖发展的公众人物，韩寒以其独特的个性和犀利的文字著称。在公众印象中，韩寒身高174厘米，身材适中，属于亚洲男性的平均身高范围。尽管外界常有关于明星身高的讨论，但韩寒本人的官方资料中身高数据保持一致。</p>
+                <br>
+                <p>作为赛车手，韩寒在赛道上展现了灵活的身手；作为作家，他留下了《三重门》、《零下一度》等经典作品；作为导演，他执导了《后会无期》、《乘风破浪》等影片。他的身高与气质相得益彰，常在影视作品中展现出成熟稳重的形象。</p>
+            </article>
+        </div>
+
+        <!-- FAQ Section -->
+        <section class="faq-section" id="faq">
+            <h2 style="margin-bottom: 1.5rem; color: var(--primary-color);">关于韩寒身高的常见问题</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">韩寒官方身高是多少？</div>
+                <div class="faq-answer">根据公开资料，韩寒的官方身高为174厘米。</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">韩寒在娱乐圈算高个子吗？</div>
+                <div class="faq-answer">在亚洲男性群体中，174厘米属于标准身高，但在欧美演员对比下可能显得偏矮，但在国内娱乐圈属于常见的身高范围。</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">韩寒的体重是多少？</div>
+                <div class="faq-answer">韩寒的体重大约在68公斤左右，身材保持得较为匀称。</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">韩寒开车需要调整座椅吗？</div>
+                <div class="faq-answer">作为职业赛车手，韩寒对赛车座椅和驾驶姿势有极高的要求，通常会根据个人身高对赛车进行专业调校。</div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <h3>韩寒资料站</h3>
+            <p>致力于提供准确、客观的公众人物公开资料查询服务。</p>
+            <p>&copy; 2023 韩寒资料站. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // 简单的 FAQ 手风琴交互逻辑
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    // 关闭其他打开的项
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    // 切换当前项
+                    item.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
